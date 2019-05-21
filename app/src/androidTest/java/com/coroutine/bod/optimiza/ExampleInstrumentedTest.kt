@@ -2,6 +2,9 @@ package com.coroutine.bod.optimiza
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
+import com.coroutine.bod.optimiza.bytest.AImpl
+import com.coroutine.bod.optimiza.bytest.BaseImpl
+import com.coroutine.bod.optimiza.bytest.Derived
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,5 +23,10 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
         assertEquals("com.coroutine.bod.optimiza", appContext.packageName)
+
+
+        var dImpl = DImpl()
+        dImpl.test()
+
     }
 }

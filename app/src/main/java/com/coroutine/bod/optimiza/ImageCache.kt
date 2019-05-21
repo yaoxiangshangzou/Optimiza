@@ -25,6 +25,7 @@ object ImageCache {
 
     fun foreach(){
         val list = listOf("1", "2", "3")
+        val list1 = list ?: listOf("1")
         list.forEachIndexed {
             index, s -> print("$s $index")
         }
