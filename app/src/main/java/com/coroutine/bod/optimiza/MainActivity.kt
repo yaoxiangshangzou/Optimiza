@@ -1,7 +1,6 @@
 package com.coroutine.bod.optimiza
 
 import android.annotation.SuppressLint
-import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
@@ -14,9 +13,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.loadmore.LoadMoreView
-import com.coroutine.bod.optimiza.R.id.async
 
 import com.coroutine.bod.optimiza.idle.BusyHandler
 import com.coroutine.bod.optimiza.idle.IdleHandler
@@ -24,7 +20,6 @@ import com.coroutine.bod.optimiza.utils.RetrofitHelper
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
 import retrofit2.Retrofit
@@ -73,7 +68,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         GlobalScope.launch(coroutineDispatcher){
             LogUtils.showLog("first coroutine")
-
         }
 
         thread(true){
@@ -86,7 +80,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val get = deferred.get(index)
             }
         }
-
+        startActivity(Intent(this, CoroutineActivity::class.java))
 
         var implAdapter = ImplAdapter()
         for (index in 0 until 30){
@@ -110,7 +104,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             },3000)
         },rlAll)
-
 
 
     }
@@ -144,7 +137,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun jobScheduler(){
-
     }
 
 

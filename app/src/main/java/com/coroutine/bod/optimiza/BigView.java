@@ -7,6 +7,7 @@ import android.graphics.BitmapRegionDecoder;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Rect;
+import android.support.annotation.Keep;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.KeyEvent;

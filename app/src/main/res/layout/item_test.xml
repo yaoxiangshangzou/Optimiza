@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="30dp"
-    android:text="12222222"
-    android:id="@+id/tvInfo"
-    >
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
 
+    <TextView
+        android:id="@+id/tvInfo"
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
+    <RatingBar
+        android:id="@+id/ratBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-
-</TextView>
+</LinearLayout>
